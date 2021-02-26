@@ -43,3 +43,12 @@ setTimeout(function () {
         $('select[name="'+q+'"]').val(max_a);
     }
 }, 1000)
+
+// random stuff
+$('button[name="randomChoice"]').click(function () {
+    for (var q in votes) {
+        var choices = Object.keys(votes[q]);
+        var i = Math.floor(Math.random() * choices.length)
+        $('select[name="'+q+'"]').val(choices[i]);
+    }
+})
